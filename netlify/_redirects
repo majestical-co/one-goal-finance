@@ -1,0 +1,5 @@
+# Redirect default Netlify subdomain to primary domain
+https://one-goal-finance.netlify.com/* https://onegoalfinance.com/:splat 301!
+
+# Redirect js single page app to index file
+/*    /index.html   200

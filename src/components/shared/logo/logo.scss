@@ -1,0 +1,67 @@
+og-logo {
+  display: inline-block;
+  --logo-color: var(--ion-color-primary);
+  font-size: 0;
+  svg {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: scaleInOuter ease-in-out 3s infinite;
+    @keyframes scaleInOuter {
+      0% {
+        transform: scale(1);
+      }
+      15% {
+        transform: scale(1.25);
+      }
+      30% {
+        transform: scale(0.001);
+        //lightning small
+        //ball
+      }
+      50% {
+        transform: scale(0.001);
+        //lightning small
+        //ball
+      }
+      75% {
+        transform: scale(1.25);
+        //ball
+      }
+      100% {
+        transform: scale(1);
+        // ball returns lightning
+      }
+    }
+    #bolt {
+      transform-origin: center;
+      animation: scaleIn ease-in-out 3s infinite;
+    }
+    @keyframes scaleIn {
+      0% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1);
+        //lightning
+      }
+      49% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(7);
+      }
+      75% {
+        transform: scale(7);
+        //ball
+      }
+      90% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+}

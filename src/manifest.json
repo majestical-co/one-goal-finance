@@ -1,0 +1,21 @@
+{
+  "name": "One Goal Finance",
+  "gcm_sender_id": "103953800507",
+  "short_name": "One Goal",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/icon/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#33495f",
+  "theme_color": "#33495f"
+}

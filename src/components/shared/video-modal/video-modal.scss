@@ -1,0 +1,36 @@
+og-video-modal.ion-page {
+  justify-content: center;
+  ion-button {
+    position: absolute;
+    top: var(--ion-safe-area-top, 0px);
+    left: 0;
+    height: 44px;
+    width: 44px;
+    z-index: 1;
+    --padding-start: 0px;
+    --padding-end: 0px;
+    margin: 0;
+    ion-icon {
+      background: rgba(var(--ion-color-dark-rgb), 0.5);
+      border-radius: 50%;
+    }
+  }
+  video {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  ion-modal.og-video-modal.landscape {
+    .modal-wrapper {
+      --width: 600px;
+      --height: 337px;
+    }
+  }
+  ion-modal.og-video-modal.portrait {
+    .modal-wrapper {
+      --width: 337px;
+      --height: 600px;
+    }
+  }
+}
