@@ -19,9 +19,9 @@ export class AppRoot {
         <Route path="/">
           <og-landing-page />
         </Route>
-        <Route path="/features">
+        {/* <Route path="/features">
           <og-features-page />
-        </Route>
+        </Route> */}
         <Route path="/privacy-policy">
           <og-privacy-policy-page />
         </Route>
