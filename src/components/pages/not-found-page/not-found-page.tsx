@@ -4,7 +4,7 @@ import { ContentWrapper } from '../../shared/content-wrapper/content-wrapper';
 
 @Component({
   tag: 'og-not-found-page',
-  styleUrl: '404-page.scss',
+  styleUrl: 'not-found-page.scss',
 })
 export class NotFoundPage {
   render() {

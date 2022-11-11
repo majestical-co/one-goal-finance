@@ -8,14 +8,14 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AppRoot {
     }
-    interface Og404Page {
-    }
     interface OgFeaturesPage {
     }
     interface OgLandingPage {
     }
     interface OgLogo {
         "animated": boolean;
+    }
+    interface OgNotFoundPage {
     }
     interface OgPrivacyPolicyPage {
     }
@@ -32,12 +32,6 @@ declare global {
     var HTMLAppRootElement: {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
-    };
-    interface HTMLOg404PageElement extends Components.Og404Page, HTMLStencilElement {
-    }
-    var HTMLOg404PageElement: {
-        prototype: HTMLOg404PageElement;
-        new (): HTMLOg404PageElement;
     };
     interface HTMLOgFeaturesPageElement extends Components.OgFeaturesPage, HTMLStencilElement {
     }
@@ -56,6 +50,12 @@ declare global {
     var HTMLOgLogoElement: {
         prototype: HTMLOgLogoElement;
         new (): HTMLOgLogoElement;
+    };
+    interface HTMLOgNotFoundPageElement extends Components.OgNotFoundPage, HTMLStencilElement {
+    }
+    var HTMLOgNotFoundPageElement: {
+        prototype: HTMLOgNotFoundPageElement;
+        new (): HTMLOgNotFoundPageElement;
     };
     interface HTMLOgPrivacyPolicyPageElement extends Components.OgPrivacyPolicyPage, HTMLStencilElement {
     }
@@ -77,10 +77,10 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
-        "og-404-page": HTMLOg404PageElement;
         "og-features-page": HTMLOgFeaturesPageElement;
         "og-landing-page": HTMLOgLandingPageElement;
         "og-logo": HTMLOgLogoElement;
+        "og-not-found-page": HTMLOgNotFoundPageElement;
         "og-privacy-policy-page": HTMLOgPrivacyPolicyPageElement;
         "og-terms-page": HTMLOgTermsPageElement;
         "og-video-modal": HTMLOgVideoModalElement;
@@ -89,14 +89,14 @@ declare global {
 declare namespace LocalJSX {
     interface AppRoot {
     }
-    interface Og404Page {
-    }
     interface OgFeaturesPage {
     }
     interface OgLandingPage {
     }
     interface OgLogo {
         "animated"?: boolean;
+    }
+    interface OgNotFoundPage {
     }
     interface OgPrivacyPolicyPage {
     }
@@ -108,10 +108,10 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "app-root": AppRoot;
-        "og-404-page": Og404Page;
         "og-features-page": OgFeaturesPage;
         "og-landing-page": OgLandingPage;
         "og-logo": OgLogo;
+        "og-not-found-page": OgNotFoundPage;
         "og-privacy-policy-page": OgPrivacyPolicyPage;
         "og-terms-page": OgTermsPage;
         "og-video-modal": OgVideoModal;
@@ -122,10 +122,10 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
-            "og-404-page": LocalJSX.Og404Page & JSXBase.HTMLAttributes<HTMLOg404PageElement>;
             "og-features-page": LocalJSX.OgFeaturesPage & JSXBase.HTMLAttributes<HTMLOgFeaturesPageElement>;
             "og-landing-page": LocalJSX.OgLandingPage & JSXBase.HTMLAttributes<HTMLOgLandingPageElement>;
             "og-logo": LocalJSX.OgLogo & JSXBase.HTMLAttributes<HTMLOgLogoElement>;
+            "og-not-found-page": LocalJSX.OgNotFoundPage & JSXBase.HTMLAttributes<HTMLOgNotFoundPageElement>;
             "og-privacy-policy-page": LocalJSX.OgPrivacyPolicyPage & JSXBase.HTMLAttributes<HTMLOgPrivacyPolicyPageElement>;
             "og-terms-page": LocalJSX.OgTermsPage & JSXBase.HTMLAttributes<HTMLOgTermsPageElement>;
             "og-video-modal": LocalJSX.OgVideoModal & JSXBase.HTMLAttributes<HTMLOgVideoModalElement>;
