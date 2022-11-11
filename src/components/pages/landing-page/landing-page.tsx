@@ -53,11 +53,12 @@ export class LandingPage {
   @Element() el: HTMLElement;
 
   private scrollTo(id: string) {
-    const content = this.el.querySelector('ion-content');
-    const scrollToElement = this.el.querySelector(id) as HTMLDivElement;
-    if (!content || !scrollToElement) return;
+    const scrollToElement = this.el.querySelector(id);
+    console.log('scroll to', {id, scrollToElement});
+    if (!scrollToElement) return;
     const y = scrollToElement.getBoundingClientRect().top;
-    content.scrollToPoint(0, y - 50, 1000);
+    console.log('y', y);
+    window.scrollTo({ top: y, behavior: 'smooth' });
   }
 
   private renderIconBenefit(icon: string, title: string, description: string) {

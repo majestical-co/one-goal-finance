@@ -256,6 +256,14 @@ body,
 html {
   background: var(--ion-color-step-50);
   color: var(--ion-text-color);
+  height: 100%;
+}
+body {
+  position: relative;
+  overflow-y: visible;
+}
+html {
+  overflow: auto;
 }
 
 ion-footer {
