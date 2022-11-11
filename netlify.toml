@@ -1,0 +1,18 @@
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+# Settings in the [build] context are global and are applied to all contexts
+# unless otherwise overridden by more specific contexts.
+[build]
+  base = "/"
+  publish = "www"
+  command = "npm run build.netlify"
+  environment = { NODE_VERSION = "14.16.0" }
+
+[context.production]
+  command = "npm run build.netlify"
+
+[functions]
+  directory = "dont-build/"
+
+[[plugins]]
+  # Installs the Lighthouse Build Plugin for all deploy contexts
+  package = "@netlify/plugin-lighthouse"
