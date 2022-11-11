@@ -6,8 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AppHome {
-    }
     interface AppRoot {
     }
     interface Og404Page {
@@ -29,12 +27,6 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
-    }
-    var HTMLAppHomeElement: {
-        prototype: HTMLAppHomeElement;
-        new (): HTMLAppHomeElement;
-    };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
     var HTMLAppRootElement: {
@@ -84,7 +76,6 @@ declare global {
         new (): HTMLOgVideoModalElement;
     };
     interface HTMLElementTagNameMap {
-        "app-home": HTMLAppHomeElement;
         "app-root": HTMLAppRootElement;
         "og-404-page": HTMLOg404PageElement;
         "og-features-page": HTMLOgFeaturesPageElement;
@@ -96,8 +87,6 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface AppHome {
-    }
     interface AppRoot {
     }
     interface Og404Page {
@@ -118,7 +107,6 @@ declare namespace LocalJSX {
         "videoURL"?: string;
     }
     interface IntrinsicElements {
-        "app-home": AppHome;
         "app-root": AppRoot;
         "og-404-page": Og404Page;
         "og-features-page": OgFeaturesPage;
@@ -133,7 +121,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "og-404-page": LocalJSX.Og404Page & JSXBase.HTMLAttributes<HTMLOg404PageElement>;
             "og-features-page": LocalJSX.OgFeaturesPage & JSXBase.HTMLAttributes<HTMLOgFeaturesPageElement>;
