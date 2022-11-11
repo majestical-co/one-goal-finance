@@ -29,21 +29,19 @@ export const ContentWrapper: FunctionalComponent<ContentWrapperProps> = ({ textO
         </ion-toolbar>
       </ion-header>
 
-      <ion-content>
-        <div class="og-content-wrapper">
-          {textOnly ? (
-            <div class="text-only-content">
-              <div class="center-content">
-                <og-logo class="app-icon" />
-                <div>{children}</div>
-              </div>
+      <div class="og-content-wrapper">
+        {textOnly ? (
+          <div class="text-only-content">
+            <div class="center-content">
+              <og-logo class="app-icon" />
+              <div>{children}</div>
             </div>
-          ) : (
-            children
-          )}
-        </div>
+          </div>
+        ) : (
+          children
+        )}
         <Footer />
-      </ion-content>
+      </div>
     </Fragment>
   );
 };

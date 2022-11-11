@@ -1,6 +1,6 @@
 .og-content-wrapper {
   color: var(--ion-text-color);
-
+  overflow-y: scroll;
   .text-only-content {
     display: flex;
     flex-direction: column;

@@ -1,10 +1,11 @@
-import { Component, h } from '@stencil/core';
+import { Component, Env, h } from '@stencil/core';
+import { createRouter, Route } from 'stencil-router-v2';
 import { initPolyglot, LocaleString } from '../../global/translate/translate';
-import { renderRouter } from './render-router';
-import { Env } from '@stencil/core';
 
+const Router = createRouter();
 @Component({
   tag: 'app-root',
+  styleUrl: 'app-root.scss',
 })
 export class AppRoot {
   async componentWillLoad() {
@@ -14,10 +15,20 @@ export class AppRoot {
 
   render() {
     return (
-      <ion-app>
-        {renderRouter()}
-        <ion-router-outlet />
-      </ion-app>
+      <Router.Switch>
+        <Route path="/">
+          <og-landing-page />
+        </Route>
+        <Route path="/features">
+          <og-features-page />
+        </Route>
+        <Route path="/privacy-policy">
+          <og-privacy-policy-page />
+        </Route>
+        <Route path="/terms">
+          <og-terms-page />
+        </Route>
+      </Router.Switch>
     );
   }
 }
