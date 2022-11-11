@@ -54,11 +54,10 @@ export class LandingPage {
 
   private scrollTo(id: string) {
     const scrollToElement = this.el.querySelector(id);
-    console.log('scroll to', {id, scrollToElement});
+    console.log('scroll to', { id, scrollToElement });
+
     if (!scrollToElement) return;
-    const y = scrollToElement.getBoundingClientRect().top;
-    console.log('y', y);
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    scrollToElement.scrollIntoView({ behavior: 'smooth' });
   }
 
   private renderIconBenefit(icon: string, title: string, description: string) {
