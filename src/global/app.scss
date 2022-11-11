@@ -7,7 +7,11 @@
 @import '~@ionic/core/css/float-elements.css';
 @import '~@ionic/core/css/text-alignment.css';
 @import '~@ionic/core/css/text-transformation.css';
+
 @import './budget-colors.scss';
+@import './content-wrapper.scss';
+@import './content-footer.scss';
+
 :root {
   --ion-color-primary: #21bd9d;
   --ion-color-primary-rgb: 33, 189, 157;
@@ -677,10 +681,7 @@ ion-virtual-scroll.ion-padding > .virtual-item {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
   @media screen and (min-width: 1080px) {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
-        0,
-        1fr
-      );
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   }
 }
 

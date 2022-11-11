@@ -45,27 +45,28 @@ og-landing-page {
     width: 100%;
     max-width: 400px;
   }
-  ul {
-    padding: 0;
-    li {
-      list-style: none;
-      padding-left: 42px;
-      margin-bottom: 15px;
-      position: relative;
-      color: var(--ion-text-color);
-      ion-icon {
-        position: absolute;
-        font-size: 32px;
-        left: 0px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-  }
+
   .og-container {
     align-items: center;
     padding-bottom: 10%;
     z-index: 1;
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        padding-left: 42px;
+        margin-bottom: 15px;
+        position: relative;
+        color: var(--ion-text-color);
+        ion-icon {
+          position: absolute;
+          font-size: 32px;
+          left: 0px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
   }
   .og-wrap-reverse svg {
     margin-top: 40px;
@@ -145,12 +146,5 @@ og-landing-page {
     div svg {
       margin: 0;
     }
-  }
-  footer {
-    background: var(--ion-background-color);
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    align-items: center;
   }
 }

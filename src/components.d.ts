@@ -5,21 +5,23 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { MatchResults } from "@stencil-community/router";
-import { LocaleString } from "./global/translate/translate";
 export namespace Components {
     interface AppHome {
     }
-    interface AppProfile {
-        "match": MatchResults;
-    }
     interface AppRoot {
-        "locale": LocaleString;
+    }
+    interface Og404Page {
+    }
+    interface OgFeaturesPage {
     }
     interface OgLandingPage {
     }
     interface OgLogo {
         "animated": boolean;
+    }
+    interface OgPrivacyPolicyPage {
+    }
+    interface OgTermsPage {
     }
     interface OgVideoModal {
         "modal": HTMLIonModalElement;
@@ -33,17 +35,23 @@ declare global {
         prototype: HTMLAppHomeElement;
         new (): HTMLAppHomeElement;
     };
-    interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
-    }
-    var HTMLAppProfileElement: {
-        prototype: HTMLAppProfileElement;
-        new (): HTMLAppProfileElement;
-    };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
     var HTMLAppRootElement: {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
+    };
+    interface HTMLOg404PageElement extends Components.Og404Page, HTMLStencilElement {
+    }
+    var HTMLOg404PageElement: {
+        prototype: HTMLOg404PageElement;
+        new (): HTMLOg404PageElement;
+    };
+    interface HTMLOgFeaturesPageElement extends Components.OgFeaturesPage, HTMLStencilElement {
+    }
+    var HTMLOgFeaturesPageElement: {
+        prototype: HTMLOgFeaturesPageElement;
+        new (): HTMLOgFeaturesPageElement;
     };
     interface HTMLOgLandingPageElement extends Components.OgLandingPage, HTMLStencilElement {
     }
@@ -57,6 +65,18 @@ declare global {
         prototype: HTMLOgLogoElement;
         new (): HTMLOgLogoElement;
     };
+    interface HTMLOgPrivacyPolicyPageElement extends Components.OgPrivacyPolicyPage, HTMLStencilElement {
+    }
+    var HTMLOgPrivacyPolicyPageElement: {
+        prototype: HTMLOgPrivacyPolicyPageElement;
+        new (): HTMLOgPrivacyPolicyPageElement;
+    };
+    interface HTMLOgTermsPageElement extends Components.OgTermsPage, HTMLStencilElement {
+    }
+    var HTMLOgTermsPageElement: {
+        prototype: HTMLOgTermsPageElement;
+        new (): HTMLOgTermsPageElement;
+    };
     interface HTMLOgVideoModalElement extends Components.OgVideoModal, HTMLStencilElement {
     }
     var HTMLOgVideoModalElement: {
@@ -65,26 +85,33 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
-        "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "og-404-page": HTMLOg404PageElement;
+        "og-features-page": HTMLOgFeaturesPageElement;
         "og-landing-page": HTMLOgLandingPageElement;
         "og-logo": HTMLOgLogoElement;
+        "og-privacy-policy-page": HTMLOgPrivacyPolicyPageElement;
+        "og-terms-page": HTMLOgTermsPageElement;
         "og-video-modal": HTMLOgVideoModalElement;
     }
 }
 declare namespace LocalJSX {
     interface AppHome {
     }
-    interface AppProfile {
-        "match"?: MatchResults;
-    }
     interface AppRoot {
-        "locale"?: LocaleString;
+    }
+    interface Og404Page {
+    }
+    interface OgFeaturesPage {
     }
     interface OgLandingPage {
     }
     interface OgLogo {
         "animated"?: boolean;
+    }
+    interface OgPrivacyPolicyPage {
+    }
+    interface OgTermsPage {
     }
     interface OgVideoModal {
         "modal"?: HTMLIonModalElement;
@@ -92,10 +119,13 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "app-home": AppHome;
-        "app-profile": AppProfile;
         "app-root": AppRoot;
+        "og-404-page": Og404Page;
+        "og-features-page": OgFeaturesPage;
         "og-landing-page": OgLandingPage;
         "og-logo": OgLogo;
+        "og-privacy-policy-page": OgPrivacyPolicyPage;
+        "og-terms-page": OgTermsPage;
         "og-video-modal": OgVideoModal;
     }
 }
@@ -104,10 +134,13 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "og-404-page": LocalJSX.Og404Page & JSXBase.HTMLAttributes<HTMLOg404PageElement>;
+            "og-features-page": LocalJSX.OgFeaturesPage & JSXBase.HTMLAttributes<HTMLOgFeaturesPageElement>;
             "og-landing-page": LocalJSX.OgLandingPage & JSXBase.HTMLAttributes<HTMLOgLandingPageElement>;
             "og-logo": LocalJSX.OgLogo & JSXBase.HTMLAttributes<HTMLOgLogoElement>;
+            "og-privacy-policy-page": LocalJSX.OgPrivacyPolicyPage & JSXBase.HTMLAttributes<HTMLOgPrivacyPolicyPageElement>;
+            "og-terms-page": LocalJSX.OgTermsPage & JSXBase.HTMLAttributes<HTMLOgTermsPageElement>;
             "og-video-modal": LocalJSX.OgVideoModal & JSXBase.HTMLAttributes<HTMLOgVideoModalElement>;
         }
     }

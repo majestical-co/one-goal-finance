@@ -17,6 +17,7 @@ import renderPWASVG from './pwa.svg';
 import renderAllDevicesSVG from './all-devices.svg';
 import renderAppStoreSVG from './app-store.svg';
 import renderPlayStoreSVG from './play-store.svg';
+import { ContentWrapper } from '../../shared/content-wrapper/content-wrapper';
 
 @Component({
   tag: 'og-landing-page',
@@ -51,7 +52,7 @@ export class LandingPage {
 
   @Element() el: HTMLElement;
 
-  scrollTo(id: string) {
+  private scrollTo(id: string) {
     const content = this.el.querySelector('ion-content');
     const scrollToElement = this.el.querySelector(id) as HTMLDivElement;
     if (!content || !scrollToElement) return;
@@ -59,7 +60,7 @@ export class LandingPage {
     content.scrollToPoint(0, y - 50, 1000);
   }
 
-  renderIconBenefit(icon: string, title: string, description: string) {
+  private renderIconBenefit(icon: string, title: string, description: string) {
     return (
       <div class="icon-list-item">
         <ion-icon name={icon} color="primary" />
@@ -71,46 +72,10 @@ export class LandingPage {
     );
   }
 
-  renderFeatureCard(icon: string, title: string, description: string) {
-    return (
-      <div
-        style={{
-          border: '1px solid var(--ion-color-step-200)',
-          borderRadius: '8px',
-          padding: '12px',
-          background: 'var(--ion-color-step-50)',
-        }}
-      >
-        <ion-icon style={{ fontSize: '32px' }} name={icon} />
-        <h4>{title}</h4>
-        <p>{description}</p>
-      </div>
-    );
-  }
-
   render() {
     return (
       <Host>
-        <ion-header class="no-after">
-          <ion-toolbar>
-            <div slot="start" style={{ display: 'flex', alignItems: 'center' }}>
-              <og-logo
-                class="app-icon"
-                style={{
-                  maxWidth: '48px',
-                  padding: '6px',
-                  margin: '4px',
-                }}
-              />
-            </div>
-            <ion-buttons slot="end">
-              <ion-button data-test="sign-in" href="https://onegoal.app/sign-in" rel="noopener noreferrer" target="_blank">
-                {translate(TranslateKeys.SIGN_IN)}
-              </ion-button>
-            </ion-buttons>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
+        <ContentWrapper>
           <section class="light-section">
             <div class="og-container og-flex-row" style={{ paddingBottom: '0', zIndex: '0' }}>
               <div class="col-12 col-sm-5" innerHTML={renderIPhoneWithBudgets}></div>
@@ -338,22 +303,7 @@ export class LandingPage {
               </div>
             </div>
           </section>
-          <footer class="ion-text-center ion-padding">
-            <div>©{new Date().getFullYear()} One Goal</div>
-            <div>
-              <ion-button class="ion-no-margin" fill="clear" href="https://instagram.com/onegoal.app" rel="noopener noreferrer" size="small" target="_blank">
-                <ion-icon name="logo-instagram" slot="icon-only" />
-              </ion-button>
-              <ion-button class="ion-no-margin" fill="clear" href="https://twitter.com/OneGoalFinance" rel="noopener noreferrer" size="small" target="_blank">
-                <ion-icon name="logo-twitter" slot="icon-only" />
-              </ion-button>
-              <ion-button class="ion-no-margin" fill="clear" href="https://www.youtube.com/channel/UC8KNmVXzrQkStAiCBGqFW5Q" rel="noopener noreferrer" size="small" target="_blank">
-                <ion-icon name="logo-youtube" slot="icon-only" />
-              </ion-button>
-            </div>
-          </footer>
-          <div class="ion-safe-area-bottom" style={{ background: 'var(--ion-background-color)' }} />
-        </ion-content>
+        </ContentWrapper>
       </Host>
     );
   }
