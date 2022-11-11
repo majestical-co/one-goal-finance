@@ -27,6 +27,7 @@ export const config: Config = {
       baseUrl: 'https://onegoalfinance.com',
       copy: [{ src: '../netlify/_redirects', dest: '_redirects' }],
       serviceWorker: null,
+      prerenderConfig: './prerender.config.ts',
     },
   ],
   plugins: [sass(), inlineSvg()],
