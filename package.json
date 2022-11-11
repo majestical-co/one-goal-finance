@@ -13,17 +13,17 @@
   },
   "devDependencies": {
     "@stencil/core": "2.13.0",
+    "@stencil/sass": "^2.0.0",
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "puppeteer": "^10.0.0",
+    "stencil-inline-svg": "^1.1.0",
     "stencil-router-v2": "^0.6.0"
   },
   "license": "MIT",
   "dependencies": {
-    "@ionic/core": "^6.2.6",
-    "@stencil/sass": "^1.5.2",
-    "node-polyglot": "^2.4.2",
-    "stencil-inline-svg": "^1.1.0"
+    "@ionic/core": "^6.3.6",
+    "node-polyglot": "^2.4.2"
   }
 }
