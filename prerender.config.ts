@@ -1,18 +1,7 @@
 import { PrerenderConfig } from '@stencil/core';
+import { convertFolderIndexToPathName } from './src/global/utils';
+
 export const config: PrerenderConfig = {
   trailingSlash: false,
-  filePath: (url, filePath) => {
-    const pathName = url.pathname;
-    if (pathName === '/') {
-      return filePath;
-    }
-    const path = `${pathName}.html`;
-    const arr = filePath.split('/');
-    arr.pop();
-    arr.pop();
-    const newPath = arr.join('/') + path;
-    console.log({ url, path, filePath, newPath });
-
-    return newPath;
-  },
+  filePath: convertFolderIndexToPathName,
 };
