@@ -54,8 +54,6 @@ export class LandingPage {
 
   private scrollTo(id: string) {
     const scrollToElement = this.el.querySelector(id);
-    console.log('scroll to', { id, scrollToElement });
-
     if (!scrollToElement) return;
     scrollToElement.scrollIntoView({ behavior: 'smooth' });
   }
