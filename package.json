@@ -6,6 +6,7 @@
   "scripts": {
     "build": "stencil build",
     "build.netlify": "stencil build --prerender",
+    "build.netlify.serve": "stencil build --prerender && cd www && python -m SimpleHTTPServer 8000",
     "start": "stencil build --dev --watch --serve",
     "test.e2e": "stencil test --spec --e2e",
     "test.e2e.watch": "stencil test --spec --e2e --watchAll",
