@@ -24,32 +24,6 @@ import { ContentWrapper } from '../../shared/content-wrapper/content-wrapper';
   styleUrl: 'landing-page.scss',
 })
 export class LandingPage {
-  private testimonials: Partial<TestimonialDocument>[] = [
-    {
-      name: 'Carly & Stephen',
-      testimonial: translate(TranslateKeys.TESTIMONIAL_1),
-      bio: translate(TranslateKeys.TEST_1_OG),
-      one_goal: translate(TranslateKeys.TEST_1_BIO),
-    },
-    {
-      name: 'Katie & Cory',
-      testimonial: translate(TranslateKeys.TESTIMONIAL_2),
-      one_goal: translate(TranslateKeys.TEST_2_OG),
-      bio: translate(TranslateKeys.TEST_2_BIO),
-    },
-    {
-      name: 'Landon & MaLese',
-      testimonial: translate(TranslateKeys.TESTIMONIAL_3),
-      one_goal: translate(TranslateKeys.TEST_3_OG),
-      bio: translate(TranslateKeys.TEST_3_BIO),
-    },
-    {
-      name: 'Bruce & Kathy',
-      testimonial: translate(TranslateKeys.TESTIMONIAL_4),
-      bio: translate(TranslateKeys.TEST_4_BIO),
-    },
-  ];
-
   @Element() el: HTMLElement;
 
   private scrollTo(id: string) {
@@ -68,6 +42,34 @@ export class LandingPage {
         </div>
       </div>
     );
+  }
+
+  private getTestimonials(): Partial<TestimonialDocument>[] {
+    return [
+      {
+        name: 'Carly & Stephen',
+        testimonial: translate(TranslateKeys.TESTIMONIAL_1),
+        bio: translate(TranslateKeys.TEST_1_OG),
+        one_goal: translate(TranslateKeys.TEST_1_BIO),
+      },
+      {
+        name: 'Katie & Cory',
+        testimonial: translate(TranslateKeys.TESTIMONIAL_2),
+        one_goal: translate(TranslateKeys.TEST_2_OG),
+        bio: translate(TranslateKeys.TEST_2_BIO),
+      },
+      {
+        name: 'Landon & MaLese',
+        testimonial: translate(TranslateKeys.TESTIMONIAL_3),
+        one_goal: translate(TranslateKeys.TEST_3_OG),
+        bio: translate(TranslateKeys.TEST_3_BIO),
+      },
+      {
+        name: 'Bruce & Kathy',
+        testimonial: translate(TranslateKeys.TESTIMONIAL_4),
+        bio: translate(TranslateKeys.TEST_4_BIO),
+      },
+    ];
   }
 
   render() {
@@ -251,7 +253,7 @@ export class LandingPage {
                     },
                   }}
                 >
-                  {this.testimonials.map(testomonial => (
+                  {this.getTestimonials().map(testomonial => (
                     <ion-slide>
                       <div>
                         <TestimonialCard testimonial={testomonial} />
