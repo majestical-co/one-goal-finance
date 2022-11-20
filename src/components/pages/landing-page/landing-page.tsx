@@ -206,12 +206,12 @@ export class LandingPage {
                   {this.renderIconBenefit('flash', translate(TranslateKeys.FAST_TRACK), translate(TranslateKeys.SET_AUTO_SEND))}
                 </div>
               </div>
-              <div class="ion-text-right">
+              {/* <div class="ion-text-right">
                 <ion-button fill="clear" href="/features">
                   {translate(TranslateKeys.LEARN_MORE)}
                   <ion-icon name="chevron-forward" slot="end" />
                 </ion-button>
-              </div>
+              </div> */}
             </div>
           </section>
           <section>

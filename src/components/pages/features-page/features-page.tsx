@@ -22,7 +22,11 @@ export class FeaturesPage {
               <div class="col-12 col-sm-6 offset-sm-1 text-col">
                 <h1>{translate(TranslateKeys.TRACK_MULTI)}</h1>
                 <p>
-                  One Goal uses <a href="https://plaid.com/">Plaid</a> to securely connect to your accounts.
+                  One Goal uses{' '}
+                  <a href="https://plaid.com/" target="_blank">
+                    Plaid
+                  </a>{' '}
+                  to securely connect to your accounts.
                 </p>
               </div>
             </div>

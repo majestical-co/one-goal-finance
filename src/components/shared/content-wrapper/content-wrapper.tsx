@@ -26,7 +26,7 @@ export const ContentWrapper: FunctionalComponent<ContentWrapperProps> = ({ bread
             </ion-router-link>
           </div>
           <ion-buttons slot="end">
-            <ion-button href="/features">{translate(TranslateKeys.FEATURES)}</ion-button>
+            {/* <ion-button href="/features">{translate(TranslateKeys.FEATURES)}</ion-button> */}
             <ion-button href="https://onegoal.app/sign-in" rel="noopener noreferrer" target="_blank">
               {translate(TranslateKeys.SIGN_IN)}
             </ion-button>

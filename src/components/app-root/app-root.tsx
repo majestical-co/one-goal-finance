@@ -19,9 +19,6 @@ export class AppRoot {
         <Route path="/">
           <og-landing-page />
         </Route>
-        <Route path="/blog">
-          <og-blog-page />
-        </Route>
         <Route
           path={match('/blog/:articleSlug')}
           render={({ articleSlug }) => (
@@ -34,8 +31,8 @@ export class AppRoot {
             />
           )}
         />
-        <Route path="/features">
-          <og-features-page />
+        <Route path={match('/blog')}>
+          <og-blog-page />
         </Route>
         <Route
           path={match('/features/:articleSlug')}
@@ -49,8 +46,8 @@ export class AppRoot {
             />
           )}
         />
-        <Route path="/getting-started">
-          <og-collection-page collectionSlug="getting-started" />
+        <Route path={match('/features')}>
+          <og-features-page />
         </Route>
         <Route
           path={match('/getting-started/:articleSlug')}
@@ -64,8 +61,8 @@ export class AppRoot {
             />
           )}
         />
-        <Route path="/tips-and-tricks">
-          <og-collection-page collectionSlug="tips-and-tricks" />
+        <Route path={match('/getting-started')}>
+          <og-collection-page collectionSlug="getting-started" />
         </Route>
         <Route
           path={match('/tips-and-tricks/:articleSlug')}
@@ -79,13 +76,16 @@ export class AppRoot {
             />
           )}
         />
-        {/* <Route path="/collections">
+        <Route path={match('/tips-and-tricks')}>
+          <og-collection-page collectionSlug="tips-and-tricks" />
+        </Route>
+        <Route path="/collections">
           <og-collections-page />
-        </Route> */}
-        <Route path="/privacy-policy">
+        </Route>
+        <Route path={match('/privacy-policy')}>
           <og-privacy-policy-page />
         </Route>
-        <Route path="/terms">
+        <Route path={match('/terms')}>
           <og-terms-page />
         </Route>
         <Route path={match('/:any')}>
