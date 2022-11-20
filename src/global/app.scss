@@ -11,6 +11,7 @@
 @import './budget-colors.scss';
 @import './content-wrapper.scss';
 @import './content-footer.scss';
+@import './layout.scss';
 
 :root {
   --ion-color-primary: #21bd9d;
@@ -430,11 +431,8 @@ og-logo.app-icon {
   }
 }
 
-.og-container {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 16px;
+.og-breadcrumb-wrapper {
+  background: var(--ion-color-step-50);
 }
 
 .og-grid {

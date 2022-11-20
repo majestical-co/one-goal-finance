@@ -5,19 +5,8 @@ import { playVideoModal } from '../../shared/video-modal/play-video-modal';
 import { translate } from '../../../global/translate/translate';
 import { TranslateKeys } from '../../../global/translate/translate-keys';
 
-import renderIPhoneWithBudgets from './iphone-with-budgets.svg';
-import renderFrustratedSVG from './frustrated.svg';
-import renderSpendingPlanSVG from './spending-plan.svg';
-import renderBudgetWeeklySVG from './budget-weekly.svg';
-import renderCelebrateSVG from './celebrate.svg';
-import renderWaveDividerSVG from './wave-divider.svg';
-import renderLookBackSVG from './look-back.svg';
-import renderInviteFamilySVG from './invite-family.svg';
-import renderPWASVG from './pwa.svg';
-import renderAllDevicesSVG from './all-devices.svg';
-import renderAppStoreSVG from './app-store.svg';
-import renderPlayStoreSVG from './play-store.svg';
 import { ContentWrapper } from '../../shared/content-wrapper/content-wrapper';
+import { OgSVG } from '../../shared/svg/svg';
 
 @Component({
   tag: 'og-landing-page',
@@ -78,7 +67,7 @@ export class LandingPage {
         <ContentWrapper>
           <section class="light-section">
             <div class="og-container og-flex-row" style={{ paddingBottom: '0', zIndex: '0' }}>
-              <div class="col-12 col-sm-5" innerHTML={renderIPhoneWithBudgets}></div>
+              <OgSVG class="col-12 col-sm-5" svg="iphone-with-budgets" />
               <div class="col-12 col-sm-6 offset-sm-1 text-col">
                 <label>{translate(TranslateKeys.ONE_GOAL)}</label>
                 <h1>{translate(TranslateKeys.SPEND_WITH_CONFIDENCE)}</h1>
@@ -100,13 +89,14 @@ export class LandingPage {
             </div>
           </section>
           <section>
-            <div innerHTML={renderWaveDividerSVG} />
+            <OgSVG svg="wave-divider" />
+
             <div class="og-container og-flex-row og-wrap-reverse" style={{ paddingBottom: '0' }}>
               <div class="col-12 col-sm-5 text-col">
                 <h1>{translate(TranslateKeys.THE_WAY_YOU)}</h1>
                 <p>{translate(TranslateKeys.EACH_MONTH_YOU)}</p>
               </div>
-              <div class="col-12 col-sm-6 offset-sm-1" innerHTML={renderFrustratedSVG}></div>
+              <OgSVG class="col-12 col-sm-6 offset-sm-1" svg="frustrated" />
             </div>
             <div class="og-container og-flex-row">
               <div class="col-12 col-sm-5">
@@ -155,9 +145,9 @@ export class LandingPage {
             </div>
           </section>
           <section class="light-section">
-            <div innerHTML={renderWaveDividerSVG} />
+            <OgSVG svg="wave-divider" />
             <div class="og-container og-flex-row">
-              <div class="col-12 col-sm-6" innerHTML={renderSpendingPlanSVG} />
+              <OgSVG class="col-12 col-sm-6" svg="spending-plan" />
               <div class="col-12 col-sm-5 offset-sm-1 text-col">
                 <h1>{translate(TranslateKeys.CREATE_A_PERSONAL)}</h1>
                 <p>{translate(TranslateKeys.WE_LL_GIVE)}</p>
@@ -165,19 +155,19 @@ export class LandingPage {
             </div>
           </section>
           <section>
-            <div innerHTML={renderWaveDividerSVG} />
+            <OgSVG svg="wave-divider" />
             <div class="og-container og-flex-row og-wrap-reverse">
               <div class="col-12 col-sm-5 text-col">
                 <h1>{translate(TranslateKeys.INVITE_YOUR_FAMILY)}</h1>
                 <p>{translate(TranslateKeys.OG_DESIGNED)}</p>
               </div>
-              <div class="col-12 col-sm-6 offset-sm-1" innerHTML={renderInviteFamilySVG} />
+              <OgSVG class="col-12 col-sm-6 offset-sm-1" svg="invite-family" />
             </div>
           </section>
           <section class="light-section">
-            <div innerHTML={renderWaveDividerSVG} />
+            <OgSVG svg="wave-divider" />
             <div class="og-container og-flex-row">
-              <div class="col-12 col-sm-6" innerHTML={renderBudgetWeeklySVG} />
+              <OgSVG class="col-12 col-sm-6" svg="budget-weekly" />
               <div class="col-12 col-sm-5 offset-sm-1 text-col">
                 <h1>{translate(TranslateKeys.START_BUDGETING_WEEKLY)}</h1>
                 <p>{translate(TranslateKeys.LOOKING_AT_THE_2)}</p>
@@ -185,17 +175,17 @@ export class LandingPage {
             </div>
           </section>
           <section>
-            <div innerHTML={renderWaveDividerSVG} />
+            <OgSVG svg="wave-divider" />
             <div class="og-container og-flex-row og-wrap-reverse">
               <div class="col-12 col-sm-5 text-col">
                 <h1>{translate(TranslateKeys.SEE_WHERE_YOUR)}</h1>
                 <p>{translate(TranslateKeys.SEE_YOUR_SPENDING)}</p>
               </div>
-              <div class="col-12 col-sm-6 offset-sm-1" innerHTML={renderLookBackSVG} />
+              <OgSVG class="col-12 col-sm-6 offset-sm-1" svg="look-back" />
             </div>
           </section>
           <section class="light-section">
-            <div innerHTML={renderWaveDividerSVG} />
+            <OgSVG svg="wave-divider" />
             <div class="og-container" id="features">
               <h1>{translate(TranslateKeys.FEATURES)}</h1>
               <div class="og-flex-row">
@@ -216,22 +206,16 @@ export class LandingPage {
                   {this.renderIconBenefit('flash', translate(TranslateKeys.FAST_TRACK), translate(TranslateKeys.SET_AUTO_SEND))}
                 </div>
               </div>
-              {/* @todo: Learn more */}
-              {/* <div class="ion-text-right">
-                <ion-button
-                  fill="clear"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://intercom.help/one-goal/en/"
-                >
+              <div class="ion-text-right">
+                <ion-button fill="clear" href="/features">
                   {translate(TranslateKeys.LEARN_MORE)}
                   <ion-icon name="chevron-forward" slot="end" />
                 </ion-button>
-              </div> */}
+              </div>
             </div>
           </section>
           <section>
-            <div innerHTML={renderWaveDividerSVG} />
+            <OgSVG svg="wave-divider" />
             <div style={{ overflow: 'hidden', width: '100%' }}>
               <div class="og-container">
                 <h1>{translate(TranslateKeys.TESTIMONIAL_S, 2)}</h1>
@@ -267,31 +251,31 @@ export class LandingPage {
             </div>
           </section>
           <section class="light-section">
-            <div innerHTML={renderWaveDividerSVG} />
+            <OgSVG svg="wave-divider" />
             <div class="og-container og-flex-row og-wrap-reverse">
               <div class="col-12 col-sm-5 text-col">
                 <h1>{translate(TranslateKeys.WORKS_ON_ALL)}</h1>
                 <p>{translate(TranslateKeys.ONE_GOAL_IS)}</p>
               </div>
-              <div class="col-12 col-sm-6 offset-sm-1" innerHTML={renderAllDevicesSVG}>
+              <OgSVG class="col-12 col-sm-6 offset-sm-1" svg="all-devices">
                 <div class="platform-wrapper">
                   <a href="https://onegoal.app/sign-in" target="_blank">
-                    <div innerHTML={renderPWASVG} />
+                    <OgSVG class="og-clickable" svg="pwa" />
                   </a>
                   <a href="https://apps.apple.com/us/app/one-goal-finance/id1572722093" target="_blank">
-                    <div class="og-clickable" innerHTML={renderAppStoreSVG} />
+                    <OgSVG class="og-clickable" svg="app-store" />
                   </a>
                   <a href="https://play.google.com/store/apps/details?id=com.onegoal.onegoal" target="_blank">
-                    <div class="og-clickable" innerHTML={renderPlayStoreSVG} />
+                    <OgSVG class="og-clickable" svg="play-store" />
                   </a>
                 </div>
-              </div>
+              </OgSVG>
             </div>
           </section>
           <section>
-            <div innerHTML={renderWaveDividerSVG} />
+            <OgSVG svg="wave-divider" />
             <div class="og-container og-flex-row">
-              <div class="col-12 col-sm-5" innerHTML={renderCelebrateSVG} />
+              <OgSVG class="col-12 col-sm-5" svg="celebrate" />
               <div class="col-12 col-sm-6 offset-sm-1 text-col">
                 <label>{translate(TranslateKeys.ONE_GOAL)}</label>
                 <h1>{translate(TranslateKeys.SPEND_WITH_CONFIDENCE)}</h1>

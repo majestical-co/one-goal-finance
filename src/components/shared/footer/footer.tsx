@@ -1,4 +1,6 @@
 import { h, Fragment, FunctionalComponent } from '@stencil/core';
+import { translate } from '../../../global/translate/translate';
+import { TranslateKeys } from '../../../global/translate/translate-keys';
 
 export const Footer: FunctionalComponent = () => {
   return (
@@ -21,20 +23,23 @@ export const Footer: FunctionalComponent = () => {
               </li>
             </ul>
           </div>
-          {/* <div>
+          <div>
             <h6>Resources</h6>
             <ul>
+              {/* <li>
+                <ion-router-link href="/features">{translate(TranslateKeys.FEATURES)}</ion-router-link>
+              </li> */}
               <li>
-                <ion-router-link href="/">Documentation</ion-router-link>
+                <ion-router-link href="/getting-started">{translate(TranslateKeys.GETTING_STARTED)}</ion-router-link>
               </li>
               <li>
-                <ion-router-link href="/features">Blog</ion-router-link>
+                <ion-router-link href="/blog">Blog</ion-router-link>
               </li>
-              <li>
+              {/* <li>
                 <ion-router-link href="">FAQ</ion-router-link>
-              </li>
+              </li> */}
             </ul>
-          </div> */}
+          </div>
           <div>
             <h6>Legal</h6>
             <ul>

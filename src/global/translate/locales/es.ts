@@ -1,6 +1,7 @@
 import { TranslateKeys } from '../translate-keys';
 const es: { [key in TranslateKeys]: string } = {
   ARE_YOU_STILL: '¿Sigues tratando de presupuestar mensualmente?',
+  BLOG: 'Blog',
   CAN_SPLIT_TRANS: '¿Tienes una compra que incluya varias categorías de presupuesto? No hay problema, puede dividir cada transacción entre múltiples presupuestos.',
   CREATE_A_PERSONAL: 'Crear un plan de gasto personal en minutos.',
   CREATE_A_UNIFIED: '¡Crea un plan de gastos unificados en minutos y comienza a seguir ese plan gratis!',
@@ -15,10 +16,12 @@ const es: { [key in TranslateKeys]: string } = {
   FEATURES: 'Características',
   FOLLOWING_YOUR_PLAN: 'Siguiendo su plan',
   FUND_YOUR_BUDGETS: 'Financiar sus presupuestos',
+  GETTING_STARTED: 'Empezando',
   IF_YOU_RE: '¡Si está presupueste mensualmente, tiene que planificar cada mes y hacer ajustes cada mes!',
   INVITE_SPOUSE: '¡Cuanto más los Merrier! Invite a su cónyuge a unirse a su equipo de presupuestación para que pueda administrar sus finanzas juntas.',
   INVITE_YOUR_FAMILY: 'Invite a su familia a unirse a su presupuesto.',
   IT_S_MUCH: 'Es mucho más fácil hacer que su dinero dure una semana a la vez, luego trate de hacerlo durar un mes entero.',
+  LEARN_MORE: 'Aprender más',
   LOOKING_AT_THE: 'Mirando todo el año, un objetivo descompone todos sus presupuestos en montos semanales, ¡solo llévelo una semana a la vez!',
   LOOKING_AT_THE_2:
     'Mirando todo el año, un objetivo descompone todos sus presupuestos en montos semanales, ¡solo llévelo una semana a la vez! Cada semana, se reserva una pequeña cantidad para todas sus facturas, ¡sin importar cuándo deben entregarse!',

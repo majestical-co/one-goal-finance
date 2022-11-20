@@ -8,7 +8,7 @@ import { ContentWrapper } from '../../shared/content-wrapper/content-wrapper';
 export class PrivacyPolicyPage {
   render() {
     return (
-      <ContentWrapper textOnly={true}>
+      <ContentWrapper textOnly={true} withLogo={true}>
         <div>
           <h1>One Goal, L.L.C. Privacy Policy</h1>
           <p>Last Updated: 11/25/2020</p>

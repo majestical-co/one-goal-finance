@@ -8,6 +8,17 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AppRoot {
     }
+    interface OgArticlePage {
+        "articleSlug": string;
+        "breadcrumbs": { href: string; label: string }[];
+    }
+    interface OgBlogPage {
+    }
+    interface OgCollectionPage {
+        "collectionSlug": string;
+    }
+    interface OgCollectionsPage {
+    }
     interface OgFeaturesPage {
     }
     interface OgLandingPage {
@@ -32,6 +43,30 @@ declare global {
     var HTMLAppRootElement: {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
+    };
+    interface HTMLOgArticlePageElement extends Components.OgArticlePage, HTMLStencilElement {
+    }
+    var HTMLOgArticlePageElement: {
+        prototype: HTMLOgArticlePageElement;
+        new (): HTMLOgArticlePageElement;
+    };
+    interface HTMLOgBlogPageElement extends Components.OgBlogPage, HTMLStencilElement {
+    }
+    var HTMLOgBlogPageElement: {
+        prototype: HTMLOgBlogPageElement;
+        new (): HTMLOgBlogPageElement;
+    };
+    interface HTMLOgCollectionPageElement extends Components.OgCollectionPage, HTMLStencilElement {
+    }
+    var HTMLOgCollectionPageElement: {
+        prototype: HTMLOgCollectionPageElement;
+        new (): HTMLOgCollectionPageElement;
+    };
+    interface HTMLOgCollectionsPageElement extends Components.OgCollectionsPage, HTMLStencilElement {
+    }
+    var HTMLOgCollectionsPageElement: {
+        prototype: HTMLOgCollectionsPageElement;
+        new (): HTMLOgCollectionsPageElement;
     };
     interface HTMLOgFeaturesPageElement extends Components.OgFeaturesPage, HTMLStencilElement {
     }
@@ -77,6 +112,10 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
+        "og-article-page": HTMLOgArticlePageElement;
+        "og-blog-page": HTMLOgBlogPageElement;
+        "og-collection-page": HTMLOgCollectionPageElement;
+        "og-collections-page": HTMLOgCollectionsPageElement;
         "og-features-page": HTMLOgFeaturesPageElement;
         "og-landing-page": HTMLOgLandingPageElement;
         "og-logo": HTMLOgLogoElement;
@@ -88,6 +127,17 @@ declare global {
 }
 declare namespace LocalJSX {
     interface AppRoot {
+    }
+    interface OgArticlePage {
+        "articleSlug"?: string;
+        "breadcrumbs"?: { href: string; label: string }[];
+    }
+    interface OgBlogPage {
+    }
+    interface OgCollectionPage {
+        "collectionSlug"?: string;
+    }
+    interface OgCollectionsPage {
     }
     interface OgFeaturesPage {
     }
@@ -108,6 +158,10 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "app-root": AppRoot;
+        "og-article-page": OgArticlePage;
+        "og-blog-page": OgBlogPage;
+        "og-collection-page": OgCollectionPage;
+        "og-collections-page": OgCollectionsPage;
         "og-features-page": OgFeaturesPage;
         "og-landing-page": OgLandingPage;
         "og-logo": OgLogo;
@@ -122,6 +176,10 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "og-article-page": LocalJSX.OgArticlePage & JSXBase.HTMLAttributes<HTMLOgArticlePageElement>;
+            "og-blog-page": LocalJSX.OgBlogPage & JSXBase.HTMLAttributes<HTMLOgBlogPageElement>;
+            "og-collection-page": LocalJSX.OgCollectionPage & JSXBase.HTMLAttributes<HTMLOgCollectionPageElement>;
+            "og-collections-page": LocalJSX.OgCollectionsPage & JSXBase.HTMLAttributes<HTMLOgCollectionsPageElement>;
             "og-features-page": LocalJSX.OgFeaturesPage & JSXBase.HTMLAttributes<HTMLOgFeaturesPageElement>;
             "og-landing-page": LocalJSX.OgLandingPage & JSXBase.HTMLAttributes<HTMLOgLandingPageElement>;
             "og-logo": LocalJSX.OgLogo & JSXBase.HTMLAttributes<HTMLOgLogoElement>;

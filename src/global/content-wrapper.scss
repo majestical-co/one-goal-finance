@@ -15,7 +15,9 @@
       max-width: 60px;
     }
     @media screen and (min-width: 468px) {
-      padding: 120px;
+      &.with-logo {
+        padding: 120px;
+      }
       og-logo {
         max-width: 100px;
         margin: -32px 0 18px -32px;

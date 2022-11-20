@@ -1,6 +1,7 @@
 import { TranslateKeys } from '../translate-keys';
 const en: { [key in TranslateKeys]: string } = {
   ARE_YOU_STILL: 'Are you still trying to budget monthly?',
+  BLOG: 'Blog',
   CAN_SPLIT_TRANS: 'Have a purchase that includes several budget categories? No problem, you can split each transaction between multiple budgets.',
   CREATE_A_PERSONAL: 'Create a personal spending plan in minutes',
   CREATE_A_UNIFIED: 'Create a unified spending plan in minutes, and start following that plan for free!',
@@ -15,10 +16,12 @@ const en: { [key in TranslateKeys]: string } = {
   FEATURES: 'Features',
   FOLLOWING_YOUR_PLAN: 'Following your plan',
   FUND_YOUR_BUDGETS: 'Fund your budgets',
+  GETTING_STARTED: 'Getting Started',
   IF_YOU_RE: "If you're budgeting monthly you have to plan every month and make adjustments EVERY MONTH!",
   INVITE_SPOUSE: 'The more the merrier! Invite your spouse to join your budgeting team so that you can manage your finances together.',
   INVITE_YOUR_FAMILY: 'Invite your family to join your budget',
   IT_S_MUCH: "It's much easier to make your money last one week at a time, then try to make it last for an entire month.",
+  LEARN_MORE: 'Learn More',
   LOOKING_AT_THE: 'Looking at the entire year, One Goal breaks down all of your budgets into weekly amounts - Just take it one week at a time!',
   LOOKING_AT_THE_2:
     "Looking at the entire year, One Goal breaks down all of your budgets into weekly amounts - Just take it one week at a time! Each week, a small amount is set aside for all of your bills, no matter when they're due!",
