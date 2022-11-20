@@ -14,9 +14,10 @@ export class ArticlePage {
 
   render() {
     const article = articles.find(a => a.slug === this.articleSlug);
+    const lastBreadcrumb = this.breadcrumbs[this.breadcrumbs.length - 1];
     return (
       <Host>
-        <ContentWrapper textOnly={true} breadcrumbs={[...this.breadcrumbs, { href: `${this.breadcrumbs.at(-1).href}/${article.slug}`, label: article.title }]}>
+        <ContentWrapper textOnly={true} breadcrumbs={[...this.breadcrumbs, { href: `${lastBreadcrumb.href}/${article.slug}`, label: article.title }]}>
           <h1>{article.title}</h1>
           <div innerHTML={article.body} />
         </ContentWrapper>
