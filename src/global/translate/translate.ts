@@ -45,11 +45,7 @@ async function getAppTranslations(locale: LocaleString) {
 }
 
 export async function initPolyglot(locale: LocaleString) {
-  console.debug('locale', locale);
-
   const locales = await getAppTranslations(locale);
-  console.debug('locales', locales);
-
   polyglot.extend(getLanguageTranslations());
   polyglot.extend(locales);
 }

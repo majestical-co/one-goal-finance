@@ -14,7 +14,6 @@ export const convertFolderIndexToPathName = (url: URL, filePath: string) => {
   const count = path.split('/').length;
   const withoutLast = arr.slice(0, -count);
   const newPath = withoutLast.join('/') + path;
-  console.log({ url, path, filePath, newPath });
   return newPath;
 };
 

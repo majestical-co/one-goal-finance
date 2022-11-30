@@ -24,7 +24,6 @@ export class BlogPage {
     const filterValue = this.searchValue;
     if (!filterValue) return true;
     const lowerCase = filterValue.toLowerCase();
-    console.log('a', a);
     if (a.title.toLowerCase().includes(lowerCase)) return true;
     if (a.description?.toLowerCase().includes(lowerCase)) return true;
     if (a.body?.toLowerCase().includes(lowerCase)) return true;
