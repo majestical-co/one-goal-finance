@@ -19,6 +19,7 @@ export class Logo {
           animation: this.animated ? null : 'none',
         }}
       >
+        <title>One Goal Logo</title>
         <path
           id="bolt"
           fill-rule="evenodd"
